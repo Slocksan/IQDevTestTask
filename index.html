@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Calculator</title>
+    <link rel=stylesheet href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
+    <link href="assets/air-datepicker-master/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="header_content">
+            <a href="#"><img class="header_logo" src="images/logo-light 1.png" alt="IQDev"></a>
+            <a href="#" class="header_text">Deposit Calculator</a>
+        </div>
+    </header>
+    <div class="content">
+        <div class="content_text">
+            <h1>Депозитный калькулятор</h1>
+            <p>Калькулятор депозитов позволяет рассчитать ваши доходы после внесения суммы на счет в банке по опредленному тарифу.</p>
+        </div>
+        <form>
+            <div class="form_row">
+                <input id="start_date" class="datepicker-here input" type='text'>
+                <div class="date_input">
+                    <input id="date_count" class="input_date_count" type="text">
+                    <div class="date_type_select custom-select">
+                        <select id="date_type" class="input_date_type">
+                            <option value="month">Месяц</option>
+                            <option value="year">Год</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form_row">
+                <input id="sum_invest" class="input" type="text">
+                <input id="percent" class="input" type="text">
+            </div>
+        </form>
+    </div>
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/air-datepicker-master/dist/js/datepicker.min.js"></script>
+</body>
+</html>

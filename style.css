@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E5E5E5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #000000;
+}
+
+input, select, textarea, button{
+    font-family:inherit;
+}
+
+header {
+    background-color: #1F2229;
+    width: 100%;
+    height: 44px;
+    
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.header_content {
+    width: 850px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.header_content a {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+
+    text-decoration: none;
+    line-height: 16,41px;
+    color: #ffffff;
+}
+
+.header_logo {
+    margin-top: 12px;
+}
+
+.header_text {
+    margin-top: 4px;
+}
+
+.content {
+    overflow: hidden;
+    width: 800px;
+    height: 700px;
+    margin: 0 auto;
+    background-color: #FAF6F6;
+}
+
+.content_text {
+    width: 100%;
+    height: 120px;
+    margin-top: 41px;
+    text-align: center;
+}
+
+.content_text h1 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+form {
+    width: 566px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.form_row {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.form_row * {
+    display: inline-block;
+}
+
+form .input {
+    width: 216px;
+    height: 30px;
+    border: 1px solid #000000;
+    padding: 20px 0 0 24px;
+}
+
+.form_row .input:first-child {
+    margin-right: 78px;
+}
+
+form .input_date_count {
+    width: 147px;
+    height: 30px;
+    border: 1px solid #000000;
+    padding: 20px 0 0 24px;
+}
+
+form .input_date_type {
+    display: inline-block;
+    width: 70px;
+    height: 52px;
+
+    margin-left: -4px;
+    border: 1px solid #000000;
+}
+
+form .date_input {
+    width: 242px;
+    height: 52px;
+}
+
+form .date_type_select {
+    float: right;
+}
