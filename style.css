@@ -74,32 +74,40 @@ form {
 
 .form_row {
     width: 100%;
+    height: 52px;
     margin-top: 40px;
+}
+
+.form_row:last-child {
+    margin-top: 60px;
 }
 
 .form_row * {
     display: inline-block;
+    vertical-align: middle;
 }
 
-form .input {
+.input {
+    display: inline-block;
     width: 216px;
     height: 30px;
     border: 1px solid #000000;
     padding: 20px 0 0 24px;
+    position: relative;
 }
 
-.form_row .input:first-child {
+.form_row .input_field:first-child {
     margin-right: 78px;
 }
 
-form .input_date_count {
+.input_date_count {
     width: 147px;
     height: 30px;
     border: 1px solid #000000;
     padding: 20px 0 0 24px;
 }
 
-form .input_date_type {
+.input_date_type {
     display: inline-block;
     width: 70px;
     height: 52px;
@@ -108,11 +116,76 @@ form .input_date_type {
     border: 1px solid #000000;
 }
 
-form .date_input {
+.date_input {
     width: 242px;
     height: 52px;
 }
 
-form .date_type_select {
+.date_type_select {
     float: right;
+    cursor: pointer;
+}
+
+.monthly_add {
+    height: 100%;
+    vertical-align: middle;
+    margin-right: 54px;
+}
+
+
+.monthly_add_checkbox {
+    margin-top: 13px;
+    margin-right: 15px;
+    width: 23px;
+    height: 23px;
+
+    cursor: pointer;
+
+    border: 1px solid #000000;
+    background-color: #ffffff;
+}
+
+.monthly_add_text {
+    margin-top: 13px;
+    font-size: 14px;
+}
+
+.to_count_button {
+    width: 172px;
+    height: 52px;
+    background: #33C4A0;
+    border: 1px solid #33C4A0;
+
+    cursor: pointer;
+
+    font-weight: 500;
+    color: #ffffff;
+}
+
+#ok_ellement {
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    box-sizing: border-box;
+    transform: rotate(-55.3deg);
+
+    display: none;
+
+    margin-left: 4px;
+
+    width: 15.81px;
+    height: 8.6px;
+}
+
+#sum_to_add {
+    display: none;
+}
+
+#sum_to_add_title {
+    display: none;
+}
+
+.input_field title {
+    position: absolute;
+    margin-left: -226px;
+    margin-top: 20px;
 }
