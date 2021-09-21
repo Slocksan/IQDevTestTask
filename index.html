@@ -26,29 +26,27 @@
         <form>
             <div class="form_row">
                 <div class="input_field">
-                    <input id="start_date" class="datepicker-here input" type='text'>
+                    <input id="start_date" class="datepicker-here input" name="datepicker" type='text' readonly>
                     <title>Дата откытия</title>
                 </div>
                 <div class="input_field">
-                    <div class="date_input">
-                        <input id="date_count" class="input_date_count" type="text">
-                        <div class="date_type_select custom-select">
-                            <select id="date_type" class="input_date_type">
-                                <option value="month">Месяц</option>
-                                <option value="year">Год</option>
-                            </select>
-                        </div>
+                    <input id="date_count" class="input_date_count required" name="date_count" type="text">
+                    <title class="input_date_title">Срок вклада</title>
+                    <div class="date_type_select custom-select">
+                        <select id="date_type" class="input_date_type">
+                            <option value="year">Год</option>
+                            <option value="month">Месяц</option>
+                        </select>
                     </div>
-                    <title>Срок вклада</title>
                 </div>
             </div>
             <div class="form_row">
                 <div class="input_field">
-                    <input id="sum_invest" class="input" type="text">
+                    <input id="sum_invest" class="input" name="sum_to_invest" type="text">
                     <title>Сумма вклада</title>
                 </div>
                 <div class="input_field">
-                    <input id="percent" class="input" type="text">
+                    <input id="percent" class="input" name="percent_input" type="text">
                     <title>Процентная ставка, % годовых</title>
                 </div>
             </div>
@@ -58,7 +56,7 @@
                     <span class="monthly_add_text">Ежемесячное пополнение вклада</span>
                 </div>
                 <div class="input_field">
-                    <input id="sum_to_add" class="input" type="text">
+                    <input id="sum_to_add" class="input" type="text" name="sum_to_add">
                     <title id="sum_to_add_title">Сумма пополнения вклада</title>
                 </div>
             </div>
@@ -69,6 +67,8 @@
     </div>
 
     <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery.validate.js"></script>
+    <script src="assets/js/additional-methods.js"></script>
     <script src="assets/air-datepicker-master/dist/js/datepicker.min.js"></script>
     <script src="script.js"></script>
 </body>

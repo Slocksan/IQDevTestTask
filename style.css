@@ -101,29 +101,22 @@ form {
 }
 
 .input_date_count {
+    display: inline-block;
     width: 147px;
     height: 30px;
     border: 1px solid #000000;
     padding: 20px 0 0 24px;
+    position: relative;
 }
 
 .input_date_type {
     display: inline-block;
     width: 70px;
     height: 52px;
+    text-align: center;
 
     margin-left: -4px;
     border: 1px solid #000000;
-}
-
-.date_input {
-    width: 242px;
-    height: 52px;
-}
-
-.date_type_select {
-    float: right;
-    cursor: pointer;
 }
 
 .monthly_add {
@@ -188,4 +181,25 @@ form {
     position: absolute;
     margin-left: -226px;
     margin-top: 20px;
+}
+
+title.input_date_title {
+    margin-left: -156px;
+}
+
+label.error {
+    position: absolute;
+    margin-left: -226px;
+    margin-top: 60px;
+    color: #FF5A5F;
+}
+
+label.error[for="date_count"]
+{
+    margin-left: -155px;
+}
+
+input.error
+{
+    border: 1px solid #FF5A5F;
 }
