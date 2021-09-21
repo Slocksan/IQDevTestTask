@@ -11,6 +11,7 @@ input, select, textarea, button{
     font-family:inherit;
 }
 
+/* Header */
 header {
     background-color: #1F2229;
     width: 100%;
@@ -45,10 +46,11 @@ header {
     margin-top: 4px;
 }
 
+/* Content */
 .content {
     overflow: hidden;
     width: 800px;
-    height: 700px;
+    height: 690px;
     margin: 0 auto;
     background-color: #FAF6F6;
 }
@@ -66,6 +68,7 @@ header {
     margin-bottom: 30px;
 }
 
+/* Form */
 form {
     width: 566px;
     height: 100%;
@@ -87,6 +90,7 @@ form {
     vertical-align: middle;
 }
 
+/* Inputs */
 .input {
     display: inline-block;
     width: 216px;
@@ -94,6 +98,11 @@ form {
     border: 1px solid #000000;
     padding: 20px 0 0 24px;
     position: relative;
+}
+
+.input:focus {
+    outline: none;
+    border: 1px solid #000000;
 }
 
 .form_row .input_field:first-child {
@@ -107,6 +116,11 @@ form {
     border: 1px solid #000000;
     padding: 20px 0 0 24px;
     position: relative;
+}
+
+.input_date_count:focus {
+    outline: none;
+    border: 1px solid #000000;
 }
 
 .input_date_type {
@@ -187,6 +201,32 @@ title.input_date_title {
     margin-left: -156px;
 }
 
+/* Bottom result sum */
+
+hr {
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.61);
+    margin-top: 28px;
+}
+
+#result_sum {
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-left: 53px;
+}
+
+.result_sum_block {
+    display: none;
+}
+
+.result_sum_block span {
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+/* Validation styles */
 label.error {
     position: absolute;
     margin-left: -226px;

@@ -5,6 +5,8 @@ $( document ).ready(function() {
         inputs[i].value = "";
     }
     document.getElementById("date_count").value = "";
+
+    document.getElementsByClassName("result_sum_block")[0].style.display = "none";
     
     // Появление поля для ввода суммы для ежемесячного пополнения
     let monthly_checkbox = document.getElementById("monthly_add_checkbox");
@@ -49,7 +51,6 @@ $( document ).ready(function() {
         })
     }
 
-    
 
     // Валидация полей формы
     $("form").validate(
@@ -105,4 +106,54 @@ $( document ).ready(function() {
         setDateFieldValidation();
         $("#date_count").valid();
     })
+
+    //AJAX - запрос
+    $(".to_count_button").bind("click", function() {
+        let term_val, sumAdd_val
+
+        let marker = true;
+
+        let start_date = document.getElementById("start_date");
+        let sum = document.getElementById("sum_invest");
+        let term = document.getElementById("date_count");
+        let percent = document.getElementById("percent");
+        let sumAdd = document.getElementById("sum_to_add");
+
+        let elements_list = [start_date, sum, term, percent, sumAdd];
+
+        elements_list.forEach(elem => {
+            $(elem).valid();
+            if(!(elem.attributes["class"].value.includes("valid"))) marker = false;
+        });
+
+        if (marker) {
+            if(document.getElementById("date_type").value == "year") {
+                term_val = parseInt(term.value) * 12;
+            }
+            else {
+                term_val = parseInt(term.value);
+            }
+    
+            if(sumAdd.value == "") {
+                sumAdd_val = 0
+            }
+            else {
+                sumAdd_val = parseInt(sumAdd.value);
+            }
+
+            $.ajax ({
+                url: "calc.php",
+                type: "POST",
+                data: 
+                ({
+                    "startDate": start_date.value,
+                    "sum": sum.value,
+                    "term": term_val,
+                    "percent": percent.value,
+                    "sumAdd": sumAdd_val
+                }),
+                dataType: "html"
+            })
+        }
+    });
 });

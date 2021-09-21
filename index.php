@@ -8,7 +8,7 @@
     <link rel=stylesheet href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
     <link href="assets/air-datepicker-master/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -62,6 +62,12 @@
             </div>
             <div class="form_row">
                 <button type="button" class="to_count_button" >Рассчитать</button>
+            </div>
+            <div class="result_sum_block">
+                <hr>
+                <span>Сумма к выплате</span>
+                <br>
+                <span id="result_sum">₽ 250 000</span>
             </div>
         </form>
     </div>
