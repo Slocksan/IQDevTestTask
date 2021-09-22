@@ -67,7 +67,7 @@
                 <hr>
                 <span>Сумма к выплате</span>
                 <br>
-                <span id="result_sum">₽ 250 000</span>
+                <span id="result_sum">₽ 0</span>
             </div>
         </form>
     </div>

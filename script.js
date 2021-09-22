@@ -15,6 +15,7 @@ $( document ).ready(function() {
     let add_sum_title = document.getElementById("sum_to_add_title");
 
     monthly_okellement.style.display = "none";
+    add_sum.style.display = "none";
 
     monthly_checkbox.addEventListener("click", function() {
         if(monthly_okellement.style.display === "none") {
@@ -119,7 +120,9 @@ $( document ).ready(function() {
         let percent = document.getElementById("percent");
         let sumAdd = document.getElementById("sum_to_add");
 
-        let elements_list = [start_date, sum, term, percent, sumAdd];
+        let elements_list = [start_date, sum, term, percent];
+
+        if(sumAdd.style.display !== "none") elements_list.push(sumAdd)
 
         elements_list.forEach(elem => {
             $(elem).valid();
@@ -141,6 +144,7 @@ $( document ).ready(function() {
                 sumAdd_val = parseInt(sumAdd.value);
             }
 
+
             $.ajax ({
                 url: "calc.php",
                 type: "POST",
@@ -152,8 +156,23 @@ $( document ).ready(function() {
                     "percent": percent.value,
                     "sumAdd": sumAdd_val
                 }),
-                dataType: "html"
+                dataType: "html",
+                error: function(xhr, status, error) {
+                    alert(xhr.responseText);
+                  },
+                success: showFinalSum
             })
+        }
+        else {
+            document.getElementsByClassName("result_sum_block")[0].style.display = "none";
+        }
+
+        function showFinalSum(data) {
+            let final_sum = (JSON.parse(data))["sum"].split("").reverse().join("")
+            .split(/(\d{3})/).join(" ").split("").reverse().join("");
+
+            document.getElementById("result_sum").innerHTML = "₽ " + final_sum;
+            document.getElementsByClassName("result_sum_block")[0].style.display = "block";
         }
     });
 });
